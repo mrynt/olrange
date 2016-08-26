@@ -1,6 +1,12 @@
 <IfModule authz_core_module>
-    Require all denied
+   allow from all
 </IfModule>
 <IfModule !authz_core_module>
     Deny from all
 </IfModule>
+RewriteEngine On
+
+RewriteBase /
+RewriteRule ^([a-zA-Z0-9]+)/$ /$1 [L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([a-zA-Z0-9]+)
+RewriteRule ^([a-zA-Z0-9]+)$ /%1/? [R=301,L]

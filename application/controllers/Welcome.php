@@ -19,10 +19,10 @@ class Welcome extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	function index() {
-        $this->smart->assign("title","Testing Smarty");
-        $this->smart->assign("description",
+        $this->smarty->assign("title","Testing Smarty");
+        $this->smarty->assign("description",
         	"This is the testing page for integrating Smarty and CodeIgniter.");
-        $this->smart->view('index');
+        $this->smarty->view('index');
  
     }
 }

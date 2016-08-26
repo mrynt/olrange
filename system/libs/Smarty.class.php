@@ -109,7 +109,7 @@ require_once SMARTY_SYSPLUGINS_DIR . 'smarty_template_resource_base.php';
  * @method int compileAllConfig(Smarty $smarty, string $extension = '.conf', bool $force_compile = false, int $time_limit = 0, int $max_errors = null)
  *
  */
-class Smarty extends Smarty_Internal_TemplateBase
+class _Smarty extends Smarty_Internal_TemplateBase
 {
     /**#@+
      * constant definitions
