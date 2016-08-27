@@ -64,7 +64,7 @@ class CI_Controller {
 	 * @return	void
 	 */
 	public function __construct()
-	{
+	{	
 		self::$instance =& $this;
 		
 
@@ -79,6 +79,7 @@ class CI_Controller {
 		$this->load =& load_class('Loader', 'core');
 		$this->load->initialize();
 		log_message('info', 'Controller Class Initialized');
+		$this->smarty->assign("domain",base_url());
 	}
 
 	// --------------------------------------------------------------------

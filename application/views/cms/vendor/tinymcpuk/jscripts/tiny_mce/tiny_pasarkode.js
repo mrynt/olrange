@@ -14,7 +14,9 @@ mode : "textareas",
 elements : "pasarkode",
 theme : "advanced",
 skin: "default",
+relative_urls : false,
 
+convert_urls : false,
 plugins : "youtubeIframe,advcode,syntaxhl,pagebreak,style,layer,table,save,advhr,advimage,advlink,insertdatetime,preview,searchreplace,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,inlinepopups,autosave,print,media",
 
 // Theme options

@@ -78,20 +78,17 @@ class Article extends CI_Controller {
             foreach($images as $img)
                     {
 
-                            $result['list'][$i]['url'] = $img->getAttribute('src');	
-                            $result['list'][$i]['alt'] = $img->getAttribute('alt');	
-                            $result['list'][$i]['title'] = $img->getAttribute('title');	
-                            $i++;
+                            $url = $img->getAttribute('src');	
                     }
-            $result['total_img'] = $i;
-            return $result;
+					
+            return $url;
     }
 
 	public function ajax_add()
 	{
 		$body = $this->input->post('in_body');
 		$img    = $this->getimg($body); 
-        $images = json_encode($img);
+        $images = $img;
 		
 		$data = array(
 				'title' 	=> $this->input->post('title'),
@@ -110,7 +107,7 @@ class Article extends CI_Controller {
 		
 		$body = $this->input->post('in_body');
 		$img    = $this->getimg($body); 
-        $images = json_encode($img);
+        $images = $img;
 		
 		$data = array(
 				'title' 	=> $this->input->post('title'),

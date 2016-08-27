@@ -3,8 +3,6 @@
 class Cms_login extends CI_Model{	
 
 
-
-
 	function cek_login($where){		
 	
 		$table = 'user';

@@ -3,26 +3,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Web extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
+	function __construct(){
+		parent::__construct();		
+		$this->load->model('Model_web');
+ 
+	}
+	
+	
 	function index() {
-        $this->smarty->assign("title","Testing Smarty");
-        $this->smarty->assign("description",
-        	"This is the testing page for integrating Smarty and CodeIgniter.");
+      
+		$banner = $this->Model_web->Get_banner();
+		$article = $this->Model_web->Get_article();
+		$this->smarty->assign('banner',$banner);
+		$this->smarty->assign('article',$article);
+		//echo '<pre>';
+		//print_r($article);die;
         $this->smarty->view('web/home');
  
+    }
+	
+	function detailarticle() {
+        
+		$article_id = $this->Model_web->Get_article_id($this->input->get('id'));
+		//print_r ($article_id);die;
+		///echo count($article_id);die;
+		
+		if(count($article_id) == 0){
+			echo '404 Page Not found';
+		}else{
+		$this->smarty->assign('getarticle',$article_id);	
+        $this->smarty->view('web/detailarticle');
+		}
     }
 }
