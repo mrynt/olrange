@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-26 09:23:07
+/* Smarty version 3.1.29, created on 2016-08-28 00:19:46
   from "C:\xampp\htdocs\olrange\application\views\cms\pages\login.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57bfee5bd6af98_45668792',
+  'unifunc' => 'content_57c21202379483_71915048',
   'file_dependency' => 
   array (
     'c44f7f76ac6de42da53e204d23dea7e86d0fc960' => 
     array (
       0 => 'C:\\xampp\\htdocs\\olrange\\application\\views\\cms\\pages\\login.html',
-      1 => 1472196177,
+      1 => 1472336379,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57bfee5bd6af98_45668792 ($_smarty_tpl) {
+function content_57c21202379483_71915048 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,16 +35,20 @@ function content_57bfee5bd6af98_45668792 ($_smarty_tpl) {
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../application/views/cms/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="../application/views/cms/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../application/views/cms/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../application/views/cms/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -89,22 +93,26 @@ function content_57bfee5bd6af98_45668792 ($_smarty_tpl) {
 
     <!-- jQuery -->
     <?php echo '<script'; ?>
- src="../application/views/cms/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
 >
 
     <!-- Bootstrap Core JavaScript -->
     <?php echo '<script'; ?>
- src="../application/views/cms/vendor/bootstrap/js/bootstrap.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/bootstrap/js/bootstrap.min.js"><?php echo '</script'; ?>
 >
 
     <!-- Metis Menu Plugin JavaScript -->
     <?php echo '<script'; ?>
- src="../application/views/cms/vendor/metisMenu/metisMenu.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/metisMenu/metisMenu.min.js"><?php echo '</script'; ?>
 >
 
     <!-- Custom Theme JavaScript -->
     <?php echo '<script'; ?>
- src="../application/views/cms/dist/js/sb-admin-2.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/dist/js/sb-admin-2.js"><?php echo '</script'; ?>
 >
 
 </body>

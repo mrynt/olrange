@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-26 23:40:10
+/* Smarty version 3.1.29, created on 2016-08-28 00:32:21
   from "C:\xampp\htdocs\olrange\application\views\cms\pages\layout\header.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57c0b73acfffd4_69540995',
+  'unifunc' => 'content_57c214f54a3601_37927843',
   'file_dependency' => 
   array (
     'ede094ef7d9ba930e5c02485d01e80fc36e98688' => 
     array (
       0 => 'C:\\xampp\\htdocs\\olrange\\application\\views\\cms\\pages\\layout\\header.html',
-      1 => 1472247604,
+      1 => 1472337119,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57c0b73acfffd4_69540995 ($_smarty_tpl) {
+function content_57c214f54a3601_37927843 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,19 +35,24 @@ function content_57c0b73acfffd4_69540995 ($_smarty_tpl) {
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../application/views/cms/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="../application/views/cms/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../application/views/cms/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="../application/views/cms/vendor/morrisjs/morris.css" rel="stylesheet">
+    <link href="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../application/views/cms/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -59,7 +64,10 @@ function content_57c0b73acfffd4_69540995 ($_smarty_tpl) {
  src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><?php echo '</script'; ?>
 >
     <![endif]-->
-
+	<?php echo '<script'; ?>
+>var domain = '<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+'<?php echo '</script'; ?>
+>
 </head>
 <body>
 

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-27 00:24:26
+/* Smarty version 3.1.29, created on 2016-08-28 00:33:27
   from "C:\xampp\htdocs\olrange\application\views\cms\pages\tables.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57c0c19ade87d6_24652611',
+  'unifunc' => 'content_57c21537dedcc5_46458637',
   'file_dependency' => 
   array (
     'c7069d318bce7353c88efb60655832e118ee0d37' => 
     array (
       0 => 'C:\\xampp\\htdocs\\olrange\\application\\views\\cms\\pages\\tables.html',
-      1 => 1472250258,
+      1 => 1472337197,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:./layout/header.html' => 1,
   ),
 ),false)) {
-function content_57c0c19ade87d6_24652611 ($_smarty_tpl) {
+function content_57c21537dedcc5_46458637 ($_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:./layout/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -68,23 +68,29 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:./layout/hea
 
     <!-- DataTables JavaScript -->
     <?php echo '<script'; ?>
- src="../application/views/cms/vendor/data-tables/jquery-2.1.4.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/data-tables/jquery-2.1.4.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="../application/views/cms/vendor/data-tables/bootstrap.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/data-tables/bootstrap.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="../application/views/cms/vendor/data-tables/jquery.dataTables.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/data-tables/jquery.dataTables.min.js"><?php echo '</script'; ?>
 >
 	<?php echo '<script'; ?>
- src="../application/views/cms/vendor/data-tables/dataTables.bootstrap.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/data-tables/dataTables.bootstrap.js"><?php echo '</script'; ?>
 >
 	
 	<?php echo '<script'; ?>
- src="../application/views/cms/vendor/tinymcpuk/jscripts/tiny_mce/tiny_mce.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/tinymcpuk/jscripts/tiny_mce/tiny_mce.js"><?php echo '</script'; ?>
 >
 	<?php echo '<script'; ?>
- src="../application/views/cms/vendor/tinymcpuk/jscripts/tiny_mce/tiny_pasarkode.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/tinymcpuk/jscripts/tiny_mce/tiny_pasarkode.js"><?php echo '</script'; ?>
 >
 	
 
@@ -106,7 +112,7 @@ $(document).ready(function() {
 
         // Load data for the table's content from an Ajax source
         "ajax": {
-            "url": "../article/ajax_list",
+            "url": domain+"article/ajax_list",
             "type": "POST"
         },
 
@@ -137,7 +143,7 @@ $(document).on('click', '.status-button', function(){
 	var status 	= $(this).attr('status');
 
 		$.ajax({
-        url : "../article/ajax_activate/",
+        url : domain+"article/ajax_activate/",
 		data : "status="+status +"&id="+id,
         type: "GET",
         dataType: "JSON",
@@ -173,7 +179,7 @@ function edit_article(id)
 	tinyMCE.get('in_body').setContent(''); 
     //Ajax Load data from ajax
     $.ajax({
-        url : "../article/ajax_edit/"+id,
+        url : domain+"article/ajax_edit/"+id,
         type: "GET",
         dataType: "JSON",
         success: function(data)
@@ -204,9 +210,9 @@ function save()
     var url;
 	 tinyMCE.triggerSave();
     if(save_method == 'add') {
-        url = "../article/ajax_add";
+        url = domain+"article/ajax_add";
     } else {
-        url = "../article/ajax_update";
+        url = domain+"article/ajax_update";
     }
     // ajax adding data to database
     $.ajax({
@@ -245,7 +251,7 @@ function delete_article(id)
     {
         // ajax delete data to database
         $.ajax({
-            url : "../article/ajax_delete/"+id,
+            url : domain+"article/ajax_delete/"+id,
             type: "POST",
             dataType: "JSON",
             success: function(data)

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-26 09:59:49
+/* Smarty version 3.1.29, created on 2016-08-28 00:35:02
   from "C:\xampp\htdocs\olrange\application\views\cms\pages\index.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57bff6f5a41b60_08601322',
+  'unifunc' => 'content_57c21596e7e951_89348273',
   'file_dependency' => 
   array (
     '30aaf71c8d962571cff77bbeb59f76b4ed382b36' => 
     array (
       0 => 'C:\\xampp\\htdocs\\olrange\\application\\views\\cms\\pages\\index.html',
-      1 => 1472198166,
+      1 => 1472336766,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:./layout/header.html' => 1,
   ),
 ),false)) {
-function content_57bff6f5a41b60_08601322 ($_smarty_tpl) {
+function content_57c21596e7e951_89348273 ($_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:./layout/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -573,33 +573,40 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:./layout/hea
 
     <!-- jQuery -->
     <?php echo '<script'; ?>
- src="../application/views/cms/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
 >
 
     <!-- Bootstrap Core JavaScript -->
     <?php echo '<script'; ?>
- src="../application/views/cms/vendor/bootstrap/js/bootstrap.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/bootstrap/js/bootstrap.min.js"><?php echo '</script'; ?>
 >
 
     <!-- Metis Menu Plugin JavaScript -->
     <?php echo '<script'; ?>
- src="../application/views/cms/vendor/metisMenu/metisMenu.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/metisMenu/metisMenu.min.js"><?php echo '</script'; ?>
 >
 
     <!-- Morris Charts JavaScript -->
     <?php echo '<script'; ?>
- src="../application/views/cms/vendor/raphael/raphael.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/raphael/raphael.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="../application/views/cms/vendor/morrisjs/morris.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/vendor/morrisjs/morris.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="../application/views/cms/data/morris-data.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/data/morris-data.js"><?php echo '</script'; ?>
 >
 
     <!-- Custom Theme JavaScript -->
     <?php echo '<script'; ?>
- src="../application/views/cms/dist/js/sb-admin-2.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/application/views/cms/dist/js/sb-admin-2.js"><?php echo '</script'; ?>
 >
 
 </body>

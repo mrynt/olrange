@@ -35,7 +35,7 @@ class Cms extends CI_Controller {
 		$cek = $this->cms_login->cek_login($where);
 		$_SESSION['login'] = $cek;
 		if($cek != 0){	
-			redirect(('../../home'));
+			redirect(('cms/home'));
 		}else{
 			echo "Username dan password salah !";
 		}

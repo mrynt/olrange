@@ -42,13 +42,13 @@
     
 
     <!-- DataTables JavaScript -->
-    <script src="../application/views/cms/vendor/data-tables/jquery-2.1.4.min.js"></script>
-    <script src="../application/views/cms/vendor/data-tables/bootstrap.min.js"></script>
-    <script src="../application/views/cms/vendor/data-tables/jquery.dataTables.min.js"></script>
-	<script src="../application/views/cms/vendor/data-tables/dataTables.bootstrap.js"></script>
+    <script src="{$domain}/application/views/cms/vendor/data-tables/jquery-2.1.4.min.js"></script>
+    <script src="{$domain}/application/views/cms/vendor/data-tables/bootstrap.min.js"></script>
+    <script src="{$domain}/application/views/cms/vendor/data-tables/jquery.dataTables.min.js"></script>
+	<script src="{$domain}/application/views/cms/vendor/data-tables/dataTables.bootstrap.js"></script>
 	
-	<script src="../application/views/cms/vendor/tinymcpuk/jscripts/tiny_mce/tiny_mce.js"></script>
-	<script src="../application/views/cms/vendor/tinymcpuk/jscripts/tiny_mce/tiny_pasarkode.js"></script>
+	<script src="{$domain}/application/views/cms/vendor/tinymcpuk/jscripts/tiny_mce/tiny_mce.js"></script>
+	<script src="{$domain}/application/views/cms/vendor/tinymcpuk/jscripts/tiny_mce/tiny_pasarkode.js"></script>
 	
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
@@ -68,7 +68,7 @@ $(document).ready(function() {
 
         // Load data for the table's content from an Ajax source
         "ajax": {
-            "url": "../article/ajax_list",
+            "url": domain+"article/ajax_list",
             "type": "POST"
         },
 
@@ -99,7 +99,7 @@ $(document).on('click', '.status-button', function(){
 	var status 	= $(this).attr('status');
 
 		$.ajax({
-        url : "../article/ajax_activate/",
+        url : domain+"article/ajax_activate/",
 		data : "status="+status +"&id="+id,
         type: "GET",
         dataType: "JSON",
@@ -135,7 +135,7 @@ function edit_article(id)
 	tinyMCE.get('in_body').setContent(''); 
     //Ajax Load data from ajax
     $.ajax({
-        url : "../article/ajax_edit/"+id,
+        url : domain+"article/ajax_edit/"+id,
         type: "GET",
         dataType: "JSON",
         success: function(data)
@@ -166,9 +166,9 @@ function save()
     var url;
 	 tinyMCE.triggerSave();
     if(save_method == 'add') {
-        url = "../article/ajax_add";
+        url = domain+"article/ajax_add";
     } else {
-        url = "../article/ajax_update";
+        url = domain+"article/ajax_update";
     }
     // ajax adding data to database
     $.ajax({
@@ -207,7 +207,7 @@ function delete_article(id)
     {
         // ajax delete data to database
         $.ajax({
-            url : "../article/ajax_delete/"+id,
+            url : domain+"article/ajax_delete/"+id,
             type: "POST",
             dataType: "JSON",
             success: function(data)
