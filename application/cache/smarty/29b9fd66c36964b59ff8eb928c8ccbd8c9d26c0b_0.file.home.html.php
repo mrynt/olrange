@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-28 19:56:35
+/* Smarty version 3.1.29, created on 2016-08-28 20:13:28
   from "C:\xampp\htdocs\olrange\application\views\web\home.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57c325d3526344_08668317',
+  'unifunc' => 'content_57c329c8983782_24635513',
   'file_dependency' => 
   array (
     '29b9fd66c36964b59ff8eb928c8ccbd8c9d26c0b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\olrange\\application\\views\\web\\home.html',
-      1 => 1472406992,
+      1 => 1472407999,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57c325d3526344_08668317 ($_smarty_tpl) {
+function content_57c329c8983782_24635513 ($_smarty_tpl) {
 ?>
 <html>
 <head>
@@ -34,6 +34,7 @@ function content_57c325d3526344_08668317 ($_smarty_tpl) {
 <style>
 body {
 	padding-top:50px;
+	height: 1600px;
 }
 
 .carousel-control.left, .carousel-control.right {
@@ -101,7 +102,7 @@ body {
 
 <div class="container">
     <div id="myCarousel" class="carousel slide">
-       <div class="carousel-inner">
+       <div class="carousel-inner" id="banner">
         <article class="item active">
           <img src="<?php echo $_smarty_tpl->tpl_vars['banner']->value[0]->image;?>
 " style="height:400px;width:1200px;">
@@ -162,7 +163,7 @@ web/detailarticle?id=<?php echo $_smarty_tpl->tpl_vars['banner']->value[2]->id;?
 	<br />
 	<div class="container-fluid">
 		
-		 <div class="row">
+		 <div class="row" id="article" style="display: none">
 		 <?php if (isset($_smarty_tpl->tpl_vars['article']->value)) {?>
 		 <?php
 $_from = $_smarty_tpl->tpl_vars['article']->value;
@@ -214,6 +215,18 @@ $_smarty_tpl->tpl_vars['articles'] = $__foreach_articles_0_saved_item;
 <?php echo '</script'; ?>
 >
 
+<?php echo '<script'; ?>
+>
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 200) {
+    $('#article').fadeIn();
+  } else {
+    $('#article').fadeOut();
+  }
+});
+<?php echo '</script'; ?>
+>
 </body>
 </html><?php }
 }
