@@ -83,7 +83,13 @@ $(document).ready(function() {
 							}
 						},
 						"aTargets": [ 3]
-					},
+		},
+		{
+						"mRender": function ( data, type, row ) {
+							return '<a href="'+row[2]+row[0]+'" target="_blank" title="go to link" alt="link"/>'+row[2]+row[0]+'</a>';
+						},
+						"aTargets": [ 2]
+		},
         { 
             "targets": [ -1 ], //last column
             "orderable": false,

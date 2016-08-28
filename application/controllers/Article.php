@@ -91,10 +91,11 @@ class Article extends CI_Controller {
         $images = $img;
 		
 		$data = array(
-				'title' 	=> $this->input->post('title'),
-				'image' 	=> $images,
-				'body' 		=> $this->input->post('in_body'),
-				'status' 	=> '0'
+				'title' 			=> $this->input->post('title'),
+				'image' 			=> $images,
+				'body' 				=> $this->input->post('in_body'),
+				'link_article' 		=> base_url().'detailarticle?id=',
+				'status' 			=> '0'
 			);
 			
 			//print_r($data);die;

@@ -16,7 +16,7 @@ class Cms extends CI_Controller {
 	function index() {
 		 
 		 if(isset($_SESSION['login']) && $_SESSION['login'] != 0){
-		 	header ("Location: /". "olrange/cms/home");
+		 	header ("Location: ".base_url(). "cms/home");
 		 }else{
 			$this->smarty->view('cms/pages/login'); 
 		 }
@@ -35,7 +35,7 @@ class Cms extends CI_Controller {
 		$cek = $this->cms_login->cek_login($where);
 		$_SESSION['login'] = $cek;
 		if($cek != 0){	
-			redirect(('cms/home'));
+			redirect((base_url().'cms/home'));
 		}else{
 			echo "Username dan password salah !";
 		}
@@ -44,10 +44,10 @@ class Cms extends CI_Controller {
 	function home() {
 		
 		if(!isset($_SESSION['login']) && $_SESSION['login'] == 0){
-        redirect(('../../'));
+        header ("Location: ".base_url(). "cms/");
 		}
 		
-		$activate = "../cms/home";
+		$activate = "home";
 		
 		$this->smarty->assign('activate',$activate);
 		$this->smarty->view('cms/pages/index');
@@ -56,7 +56,7 @@ class Cms extends CI_Controller {
 	function dataarticle() {
 		
 		if(!isset($_SESSION['login']) && $_SESSION['login'] == 0){
-        redirect(('../../'));
+        header ("Location: ".base_url(). "cms/");
 		}
 		
 		$activate = "dataarticle";
@@ -68,6 +68,6 @@ class Cms extends CI_Controller {
 	
 	function logout() {
 		session_destroy(); 		
-		header("Location: /". "olrange/cms/");
+		header("Location: ".base_url(). "cms/");
 	}
 }

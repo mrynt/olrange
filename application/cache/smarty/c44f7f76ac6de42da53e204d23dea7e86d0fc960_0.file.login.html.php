@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-28 00:19:46
+/* Smarty version 3.1.29, created on 2016-08-28 08:57:51
   from "C:\xampp\htdocs\olrange\application\views\cms\pages\login.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57c21202379483_71915048',
+  'unifunc' => 'content_57c28b6f03cf37_57757196',
   'file_dependency' => 
   array (
     'c44f7f76ac6de42da53e204d23dea7e86d0fc960' => 
     array (
       0 => 'C:\\xampp\\htdocs\\olrange\\application\\views\\cms\\pages\\login.html',
-      1 => 1472336379,
+      1 => 1472367463,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57c21202379483_71915048 ($_smarty_tpl) {
+function content_57c28b6f03cf37_57757196 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,7 +73,8 @@ function content_57c21202379483_71915048 ($_smarty_tpl) {
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" method="POST" action="login">
+                        <form role="form" method="POST" action="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+/cms/login">
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="username" name="username" type="text" autofocus>

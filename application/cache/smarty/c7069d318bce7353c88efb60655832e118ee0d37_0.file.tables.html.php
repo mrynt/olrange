@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-28 00:33:27
+/* Smarty version 3.1.29, created on 2016-08-28 19:34:31
   from "C:\xampp\htdocs\olrange\application\views\cms\pages\tables.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57c21537dedcc5_46458637',
+  'unifunc' => 'content_57c320a75430b4_79117200',
   'file_dependency' => 
   array (
     'c7069d318bce7353c88efb60655832e118ee0d37' => 
     array (
       0 => 'C:\\xampp\\htdocs\\olrange\\application\\views\\cms\\pages\\tables.html',
-      1 => 1472337197,
+      1 => 1472405662,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:./layout/header.html' => 1,
   ),
 ),false)) {
-function content_57c21537dedcc5_46458637 ($_smarty_tpl) {
+function content_57c320a75430b4_79117200 ($_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:./layout/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -127,7 +127,13 @@ $(document).ready(function() {
 							}
 						},
 						"aTargets": [ 3]
-					},
+		},
+		{
+						"mRender": function ( data, type, row ) {
+							return '<a href="'+row[2]+row[0]+'" target="_blank" title="go to link" alt="link"/>'+row[2]+row[0]+'</a>';
+						},
+						"aTargets": [ 2]
+		},
         { 
             "targets": [ -1 ], //last column
             "orderable": false,

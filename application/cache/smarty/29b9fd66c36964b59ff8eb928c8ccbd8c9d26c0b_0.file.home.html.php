@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-27 23:26:02
+/* Smarty version 3.1.29, created on 2016-08-28 19:56:35
   from "C:\xampp\htdocs\olrange\application\views\web\home.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57c2056abfa0a8_51198811',
+  'unifunc' => 'content_57c325d3526344_08668317',
   'file_dependency' => 
   array (
     '29b9fd66c36964b59ff8eb928c8ccbd8c9d26c0b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\olrange\\application\\views\\web\\home.html',
-      1 => 1472333159,
+      1 => 1472406992,
       2 => 'file',
     ),
   ),
@@ -19,14 +19,13 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57c2056abfa0a8_51198811 ($_smarty_tpl) {
+function content_57c325d3526344_08668317 ($_smarty_tpl) {
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Demo: Fullsize Header - Bootstrap Carousel</title>
-<meta name="description" content="Fullsize Header - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<title>Simple Article</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 <?php echo '<script'; ?>
@@ -107,6 +106,7 @@ body {
           <img src="<?php echo $_smarty_tpl->tpl_vars['banner']->value[0]->image;?>
 " style="height:400px;width:1200px;">
           <div class="carousel-caption">
+		  <?php if (isset($_smarty_tpl->tpl_vars['banner']->value)) {?>
             <h3><?php echo $_smarty_tpl->tpl_vars['banner']->value[0]->title;?>
 </h3>  
 			<p class="tagline"></p>
@@ -136,7 +136,8 @@ web/detailarticle?id=<?php echo $_smarty_tpl->tpl_vars['banner']->value[1]->id;?
 web/detailarticle?id=<?php echo $_smarty_tpl->tpl_vars['banner']->value[2]->id;?>
 ">View More</a></p>
           </div>
-        </article>                      
+        </article> 
+		<?php }?>
       </div>
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -155,9 +156,14 @@ web/detailarticle?id=<?php echo $_smarty_tpl->tpl_vars['banner']->value[2]->id;?
       </div>
     </div> 
 	<br>
+	<hr>
+	 <center><h1>LIST ARTICLE</h1></center>
+	<hr>
+	<br />
 	<div class="container-fluid">
 		
 		 <div class="row">
+		 <?php if (isset($_smarty_tpl->tpl_vars['article']->value)) {?>
 		 <?php
 $_from = $_smarty_tpl->tpl_vars['article']->value;
 if (!is_array($_from) && !is_object($_from)) {
@@ -187,6 +193,7 @@ if ($__foreach_articles_0_saved_item) {
 $_smarty_tpl->tpl_vars['articles'] = $__foreach_articles_0_saved_item;
 }
 ?>
+			<?php }?>
 				<hr>
 		 </div>
 	</div>

@@ -14,8 +14,10 @@ class Web extends CI_Controller {
       
 		$banner = $this->Model_web->Get_banner();
 		$article = $this->Model_web->Get_article();
+		
 		$this->smarty->assign('banner',$banner);
 		$this->smarty->assign('article',$article);
+		
 		//echo '<pre>';
 		//print_r($article);die;
         $this->smarty->view('web/home');
