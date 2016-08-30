@@ -23,6 +23,7 @@ class Model_web extends CI_Model{
 					-> select('id')
 					-> select('title')
 					-> select('image')
+					-> select('body')
 					-> where('status','1')
 					-> order_by('id','desc')
 					-> get($this->table);

@@ -55,13 +55,13 @@ $_CONFIG = array(
     'types' => array(
 
         // CKEditor & FCKEditor types
-        'files'   =>  "doc",
+        'files'   =>  "",
         'flash'   =>  "swf",
         'images'  =>  "*img",
 
         // TinyMCE types
-        'file'    =>  "doc",
-        'media'   =>  "swf flv avi mpg mpeg qt mov wmv asf rm",
+        'file'    =>  "doc pdf zip",
+        'media'   =>  "swf flv avi mpg mpeg qt mov wmv asf rm pdf",
         'image'   =>  "*img",
     ),
 

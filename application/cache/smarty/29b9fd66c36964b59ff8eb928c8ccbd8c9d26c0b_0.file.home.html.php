@@ -1,105 +1,36 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-28 20:13:28
+/* Smarty version 3.1.29, created on 2016-08-29 17:41:37
   from "C:\xampp\htdocs\olrange\application\views\web\home.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57c329c8983782_24635513',
+  'unifunc' => 'content_57c457b1a76a91_41430072',
   'file_dependency' => 
   array (
     '29b9fd66c36964b59ff8eb928c8ccbd8c9d26c0b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\olrange\\application\\views\\web\\home.html',
-      1 => 1472407999,
+      1 => 1472485293,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:./header.html' => 1,
   ),
 ),false)) {
-function content_57c329c8983782_24635513 ($_smarty_tpl) {
+function content_57c457b1a76a91_41430072 ($_smarty_tpl) {
+if (!is_callable('smarty_modifier_truncate')) require_once 'C:\\xampp\\htdocs\\olrange\\system\\libs\\plugins\\modifier.truncate.php';
+$_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:./header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Simple Article</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-<?php echo '<script'; ?>
- src="https://code.jquery.com/jquery-3.1.0.js"><?php echo '</script'; ?>
->
-<style>
-body {
-	padding-top:50px;
-	height: 1600px;
-}
 
-.carousel-control.left, .carousel-control.right {
-	background-image:none !important;
-}
-.carousel-inner .item img {
-	width:100%;
-	height:100%;
-}
-.carousel-indicators {
-	bottom:5px;
-	left:0;
-	width:auto;
-	padding:5px 25px 5px 25px;
-	margin-left:0;
-	background:rgba(0,0,0,0.7);
-}
-.carousel-indicators li {
-	border-radius:0;
-	width:8px;
-	height:8px;
-	background:#fff;
-}
-.carousel-indicators .active {
-	width:10px;
-	height:10px;
-	background:#39b3d7;
-	border-color:#39b3d7;
-}
-
-.carousel-control {
-	background:	#39b3d7;
-	color:#fff;
-	padding: 4px 0;
-	width:26px;
-	top:auto;	
-	left:auto;
-	bottom:12px;
-	opacity:0.85;
-}
-.carousel-control.right {
-	right:10px;
-}
-
-.carousel-control.left {
-	right: 46px;
-}
-.carousel-caption {
-	top:auto;
-	width:auto;
-	right:auto;
-	bottom:60px;
-	left:0;
-	padding:20px;
-	background:rgba(0,0,0,0.70);
-	text-align:left;
-  	height:auto;
-	max-width:50%;
-
-}
-</style>
-
-</head>
 <body>
-
+<div class="se-pre-con"></div>
+<div class="wrapper">
+<div class="header">
+	<h1>SIMPLE ARTICLE</h1>
+</div>
 <div class="container">
     <div id="myCarousel" class="carousel slide">
        <div class="carousel-inner" id="banner">
@@ -108,9 +39,10 @@ body {
 " style="height:400px;width:1200px;">
           <div class="carousel-caption">
 		  <?php if (isset($_smarty_tpl->tpl_vars['banner']->value)) {?>
-            <h3><?php echo $_smarty_tpl->tpl_vars['banner']->value[0]->title;?>
-</h3>  
-			<p class="tagline"></p>
+            <h3><b><?php echo $_smarty_tpl->tpl_vars['banner']->value[0]->title;?>
+</b></h3>  
+			<p align="justify" class="tagline"><?php echo smarty_modifier_truncate(strip_tags($_smarty_tpl->tpl_vars['banner']->value[0]->body),130,'');?>
+</p>
             <p><a class="btn btn-info btn-sm" href="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
 web/detailarticle?id=<?php echo $_smarty_tpl->tpl_vars['banner']->value[0]->id;?>
 ">View More</a></p>
@@ -120,8 +52,10 @@ web/detailarticle?id=<?php echo $_smarty_tpl->tpl_vars['banner']->value[0]->id;?
           <img src="<?php echo $_smarty_tpl->tpl_vars['banner']->value[1]->image;?>
 " style="height:400px;width:1200px;">
           <div class="carousel-caption">
-            <h3><?php echo $_smarty_tpl->tpl_vars['banner']->value[1]->title;?>
-</h3>
+            <h3><b><?php echo $_smarty_tpl->tpl_vars['banner']->value[1]->title;?>
+</b></h3>
+			<p align="justify" class="tagline"><?php echo smarty_modifier_truncate(strip_tags($_smarty_tpl->tpl_vars['banner']->value[1]->body),130,'');?>
+</p>
             <p><a class="btn btn-info btn-sm" href="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
 web/detailarticle?id=<?php echo $_smarty_tpl->tpl_vars['banner']->value[1]->id;?>
 ">View More</a></p>
@@ -131,8 +65,10 @@ web/detailarticle?id=<?php echo $_smarty_tpl->tpl_vars['banner']->value[1]->id;?
           <img src="<?php echo $_smarty_tpl->tpl_vars['banner']->value[2]->image;?>
 " style="height:400px;width:1200px;">
           <div class="carousel-caption">
-            <h3><?php echo $_smarty_tpl->tpl_vars['banner']->value[2]->title;?>
-</h3>
+            <h3><b><?php echo $_smarty_tpl->tpl_vars['banner']->value[2]->title;?>
+</b></h3>
+			<p align="justify" class="tagline"><?php echo smarty_modifier_truncate(strip_tags($_smarty_tpl->tpl_vars['banner']->value[2]->body),130,'');?>
+</p>
             <p><a class="btn btn-info btn-sm" href="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
 web/detailarticle?id=<?php echo $_smarty_tpl->tpl_vars['banner']->value[2]->id;?>
 ">View More</a></p>
@@ -179,10 +115,14 @@ $__foreach_articles_0_saved_local_item = $_smarty_tpl->tpl_vars['articles'];
 ?>
 			<div class="col-md-4">
 			<img src="<?php echo $_smarty_tpl->tpl_vars['articles']->value->image;?>
-" style="height:300px;width:360px;">
+" style="height:200px;width:260px;">
 			<br />
 			<h2><?php echo $_smarty_tpl->tpl_vars['articles']->value->title;?>
 </h2> 
+			<hr>
+			<p align="justify"><?php echo smarty_modifier_truncate(strip_tags($_smarty_tpl->tpl_vars['articles']->value->body),330,'');?>
+ </p>
+			<br>
 			  <p><a class="btn btn-primary" href="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
 web/detailarticle?id=<?php echo $_smarty_tpl->tpl_vars['articles']->value->id;?>
 ">View details &raquo;</a></p>
@@ -197,6 +137,10 @@ $_smarty_tpl->tpl_vars['articles'] = $__foreach_articles_0_saved_item;
 			<?php }?>
 				<hr>
 		 </div>
+	</div>
+</div>	
+	<div class="footer navbar-relative-bottom">
+		<h4><center>MARIYANTO</center></h4>
 	</div>
 </div>
 <?php echo '<script'; ?>

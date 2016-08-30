@@ -1,49 +1,36 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-08-27 23:03:44
+/* Smarty version 3.1.29, created on 2016-08-29 17:34:21
   from "C:\xampp\htdocs\olrange\application\views\web\detailarticle.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57c20030a937e3_21943477',
+  'unifunc' => 'content_57c455fd7aa591_26246784',
   'file_dependency' => 
   array (
     'd3fe8e5f0edd7d956d16191c6bc0aa211a4b5474' => 
     array (
       0 => 'C:\\xampp\\htdocs\\olrange\\application\\views\\web\\detailarticle.html',
-      1 => 1472331821,
+      1 => 1472484832,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:./header.html' => 1,
   ),
 ),false)) {
-function content_57c20030a937e3_21943477 ($_smarty_tpl) {
+function content_57c455fd7aa591_26246784 ($_smarty_tpl) {
+$_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:./header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A Bootstrap Blog Template">
-    <meta name="author" content="Vijaya Anand">
-    <title>Home</title>
-<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-<?php echo '<script'; ?>
- src="https://code.jquery.com/jquery-3.1.0.js"><?php echo '</script'; ?>
->
-<style>
-body {
-	padding-top:50px;
-}
 
-</style>
-
-</head>
 <body>
+<div class="wrapper">
+<div class="header">
+	<h1>SIMPLE ARTICLE</h1>
+</div>
 	<div class="container">
+	<div class="content">
 	<a class="btn btn-primary" href="<?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
 " value="Back Home">Back Home</a>
 		<div class="col-md-9">
@@ -51,7 +38,6 @@ body {
 </b></h1>
 			<hr>
 		</div>
-		<br>
 		<article>
 			<div  align="justify" class="col-md-9">
 			<br />
@@ -61,10 +47,12 @@ body {
 			</div>
 			</div>
 		</article>
+		</div>
 	</div>
-	<br />
-	<br />
-	<br />
+	<div class="footer bottom">
+		<h4><center>MARIYANTO</center></h4>
+	</div>
+</div>
 	<hr>	
 </body>
 
